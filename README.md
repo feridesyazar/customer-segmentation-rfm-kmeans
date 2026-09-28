@@ -189,3 +189,96 @@ The final model uses:
 
 ```python
 selected_k = 4
+```
+
+The final model achieved:
+
+**Silhouette Score: 0.5743**
+
+The K-Means algorithm identified four customer segments.
+
+---
+
+## Customer Segments
+
+| Segment | Customers | Avg. Recency | Avg. Frequency | Avg. Monetary |
+|---|---:|---:|---:|---:|
+| Recent / Occasional | 2,044 | 108.35 | 1.07 | 97.62 |
+| At Risk | 930 | 506.22 | 1.05 | 106.25 |
+| Loyal High-Value | 67 | 183.49 | 3.99 | 995.89 |
+| Champions | 13 | 78.38 | 11.23 | 3553.69 |
+
+### Recent / Occasional
+
+Customers who purchased relatively recently but generally have low purchase frequency.
+
+### At Risk
+
+Customers whose last purchase was a long time ago and may require reactivation.
+
+### Loyal High-Value
+
+Repeat customers with relatively high spending and higher purchase frequency.
+
+### Champions
+
+Very frequent, recent, and very high-value customers.
+
+> The segment names are business interpretations of the RFM cluster profiles and are not labels provided by the original dataset.
+
+---
+
+## Marketing Interpretation
+
+| Segment | Main Characteristic | Possible Marketing Action |
+|---|---|---|
+| **Champions** | Very frequent and high-spending customers | Loyalty rewards, premium offers, early access |
+| **Loyal High-Value** | Repeat customers with high spending | Cross-selling, personalized recommendations |
+| **Recent / Occasional** | Recent but mostly one-time customers | Encourage a second purchase, follow-up offers |
+| **At Risk** | Long time since last purchase | Reactivation campaigns, targeted incentives |
+
+---
+
+## Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- SQLite
+- Scikit-learn
+- Matplotlib
+- Seaborn
+- Jupyter Notebook
+
+---
+
+## Key Results
+
+- **3,054 customers** analyzed
+- RFM customer profiles created
+- SQLite database workflow implemented
+- Elbow Method and Silhouette Score used for cluster evaluation
+- **4 customer segments** selected
+- Final Silhouette Score: **0.5743**
+- Customer segments translated into actionable marketing strategies
+
+---
+
+## Conclusion
+
+This project demonstrates how transactional customer data can be transformed into meaningful customer segments using RFM analysis and K-Means clustering.
+
+The original data was first organized into Customers, Orders, and Products tables and stored in a SQLite database. After importing and merging the tables, RFM features were calculated for **3,054 customers**.
+
+The number of customer segments was evaluated using both the **Elbow Method** and **Silhouette Score**. A four-cluster solution was selected to provide a balance between statistical separation and business interpretability.
+
+The final customer segments were:
+
+- **Recent / Occasional:** 2,044 customers
+- **At Risk:** 930 customers
+- **Loyal High-Value:** 67 customers
+- **Champions:** 13 customers
+
+These customer profiles can support targeted marketing activities such as reactivation campaigns, repeat-purchase strategies, personalized recommendations, loyalty programs, and premium offers.
+
+Overall, the project shows how unsupervised machine learning can transform transactional data into actionable business insights.
