@@ -1,4 +1,4 @@
-# Customer Segmentation with RFM Analysis and K-Means
+# 🛍️ Customer Segmentation with RFM Analysis and K-Means
 
 ## Overview
 
